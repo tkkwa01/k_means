@@ -70,7 +70,7 @@ def calcIntraDist(data, centers, clusters):
     sum = 0
     for i, center in enumerate(centers):
         for point_idx in clusters[i]:
-            sum += calcDistance2(center, data[point_idx])
+            sum += calcDistance(center, data[point_idx])
     return sum / len(data)
 
 # クラスタ間分散（代表点間の距離の平均）を計算
@@ -78,7 +78,7 @@ def calcInterDist(centers):
     sum = 0
     for i in range(len(centers)):
         for j in range(i + 1, len(centers)):
-            sum += calcDistance2(centers[i], centers[j])
+            sum += calcDistance(centers[i], centers[j])
     return sum / (len(centers) * (len(centers) - 1) // 2)
 
 # データの読み込み
