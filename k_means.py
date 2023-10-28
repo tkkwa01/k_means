@@ -9,13 +9,6 @@ def calcDistance(v1, v2):
         sum2 += ((v1[i] - v2[i]) * (v1[i] - v2[i]))
     return math.sqrt(sum2)
 
-# 2つの特徴点間の距離の2乗を計算する関数
-def calcDistance2(v1, v2):
-    sum2 = 0
-    dim = len(v1)
-    for i in range(dim):
-        sum2 += ((v1[i] - v2[i]) * (v1[i] - v2[i]))
-    return sum2
 
 # 初期の代表点を設定する関数
 def initCenters(data, k):
